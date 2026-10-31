@@ -1,0 +1,11 @@
+* text=auto
+*.bat text eol=crlf
+*.sh text eol=lf
+*.command text eol=lf
+*.py text eol=lf
+*.sf2 binary
+*.sf3 binary
+*.otf binary
+*.eot binary
+*.woff binary
+*.woff2 binary

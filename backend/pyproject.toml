@@ -1,0 +1,33 @@
+[project]
+name = "guitar-helper-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "httpx>=0.27",
+  "python-multipart>=0.0.9",
+  "yt-dlp[default]>=2025.10",
+  "librosa>=0.10",
+  "pretty_midi>=0.2.10",
+  "soundfile>=0.12",
+  "numpy>=1.26",
+  "imageio-ffmpeg>=0.5",  # bundled ffmpeg: no system install needed on Windows/macOS
+  "deno>=2.4",  # JavaScript runtime yt-dlp needs for YouTube
+]
+
+[project.optional-dependencies]
+# Guitar removal. Install torch CPU wheels first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+separation = ["torch>=2.1", "demucs>=4.1"]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
