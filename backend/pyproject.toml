@@ -2,6 +2,7 @@
 name = "guitar-helper-backend"
 version = "0.1.0"
 requires-python = ">=3.11"
+license = "MIT"
 dependencies = [
   "fastapi>=0.115",
   "uvicorn[standard]>=0.30",
@@ -26,7 +27,7 @@ dev = ["pytest>=8"]
 testpaths = ["tests"]
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

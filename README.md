@@ -95,3 +95,12 @@ Configuration (env vars): `GH_DATA_DIR`, `GH_SEPARATION_MODEL` (default `htdemuc
 - Auto-sync can slip by about half a second inside long stretches of identical bars. Use the offset nudge or Re-sync.
 - YouTube changes often. If downloads fail, update yt-dlp: `backend/.venv/bin/pip install -U "yt-dlp[default]"` (Windows: `backend\.venv\Scripts\pip ...`).
 - AI separation uses an NVIDIA GPU when PyTorch was installed with `--gpu`; otherwise the CPU (a few minutes per song). Apple GPUs aren't used.
+
+## License
+
+Guitar Helper's own code is released under the [MIT License](LICENSE).
+
+Bundled third-party files keep their own licenses: the Bravura font (SIL OFL 1.1, `frontend/public/font/`), the
+SONiVOX soundfont (Apache-2.0, `frontend/public/soundfont/`), and the npm/Python dependencies installed by the launcher.
+The MIT license doesn't cover tabs, recordings or any other content the app fetches. Those belong to their owners (see
+**Credits & legal** in the app).
